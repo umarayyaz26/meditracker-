@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediTracker — CLI Patient & Medication Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <span class="logo">MediTracker</span>
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="#usage">Usage</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Manage patients & medications from the terminal</h1>
+      <p>MediTracker is a fast, reliable CLI tool for healthcare professionals. Built with Rust for performance and safety.</p>
+      <div class="cta">
+        <a href="https://github.com/umarayyaz26/meditracker/releases" class="btn primary">Download</a>
+        <a href="https://github.com/umarayyaz26/meditracker" class="btn secondary">View on GitHub</a>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="icon">📋</span>
+          <h3>Patient Records</h3>
+          <p>Add, view, and manage patient records with ID, name, age, gender, and condition.</p>
+        </div>
+        <div class="card">
+          <span class="icon">💊</span>
+          <h3>Medication Tracking</h3>
+          <p>Attach medications with schedules to each patient. Add, remove, or update with ease.</p>
+        </div>
+        <div class="card">
+          <span class="icon">💾</span>
+          <h3>JSON Persistence</h3>
+          <p>Data is automatically saved to a local JSON file. No database required.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📊</span>
+          <h3>CSV Export</h3>
+          <p>Export all patients and medications to CSV for analysis or sharing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <h2>Installation</h2>
+      <p>Pre-built binaries for Linux (x86_64 & aarch64) are available on GitHub Releases.</p>
+      <pre><code># Download and extract (example for x86_64)
+curl -sL https://github.com/umarayyaz26/meditracker/releases/latest/download/meditracker-x86_64-unknown-linux-musl.tar.gz | tar xz
+chmod +x meditracker
+./meditracker --help</code></pre>
+      <p>Or build from source with <code>cargo install meditracker</code> (after cloning the repo).</p>
+    </section>
+
+    <section id="usage">
+      <h2>Usage</h2>
+      <pre><code>$ meditracker
+
+╔══════════════════════════════════════╗
+║         MediTracker v1.0.2           ║
+╚══════════════════════════════════════╝
+  1. Add Patient
+  2. View Patients
+  3. Add Medication
+  ...</code></pre>
+      <p>Use <code>--data-path</code> to specify a custom data file location.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>MediTracker — Built with Rust. MIT License.</p>
+    <p><a href="https://github.com/umarayyaz26/meditracker">GitHub</a></p>
+  </footer>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

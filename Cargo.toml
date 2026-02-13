@@ -1,0 +1,18 @@
+[package]
+name = "meditracker"
+version = "1.0.2"
+edition = "2021"
+authors = ["Umar"]
+description = "A fast, reliable CLI tool for healthcare professionals to manage patient and medication records. Features JSON persistence, CSV export, and cross-platform Linux binaries."
+license = "MIT"
+repository = "https://github.com/umarayyaz26/meditracker"
+homepage = "https://umarayyaz26.github.io/meditracker"
+keywords = ["cli", "healthcare", "medication", "patient", "csv"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+csv = "1.1"
+clap = { version = "4.4", features = ["derive"] }
+
